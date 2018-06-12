@@ -32,7 +32,7 @@ if not os.path.exists('ftp.db'):
 
 if not os.path.exists('settings.ini'):
     with open('settings.ini', 'w') as inifile:
-        inifile.write('ftp.skarb.com.ua,basemain,48999948,ftp_update')
+        inifile.write('ftp_address,user,password,ftp_folder')
 
 with open('settings.ini', 'r') as inifile:
     ftp_path = inifile.read().split(',')
@@ -384,5 +384,4 @@ def backup(backup_list, zip_name, backup_folder, run_after, name_):
 
 
 if __name__ == "__main__":
-    # sync_to_ftp('ftp.skarb.com.ua', ('basemain', '48999948'), 'test', 'D:\\Python\\FtpClient\\test\\', 0)
-    backup(['D:\\Python\\FtpClient\\test'], 'newarchiv.zip', 9)
+    pass
